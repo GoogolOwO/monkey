@@ -23,7 +23,7 @@
         document.getElementById("abuse-report-button").style.fontWeight = "bold";
     }
     setTimeout(() => {
-        if(window.source.body.indexOf("<script")){
+        if(window.source.body.indexOf("<script") !== -1){
             document.getElementById("abuse-report-button").style.color = "red";
         }
     },3000);
