@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Wikidot 反 XSS 检测
 // @namespace    https://wikidot.com/
-// @version      0.2.0
+// @version      0.2.1
 // @description  自动检测 XSS 脚本
 // @author       Googol
 // @match        http://*.wikidot.com/*
