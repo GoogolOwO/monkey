@@ -20,6 +20,7 @@
     let existXSS = document.getElementById("page-content").innerHTML.indexOf("<script") !== -1;
     if(existXSS){
         document.getElementById("abuse-report-button").style.color = "blue";
+        document.getElementById("abuse-report-button").style.fontWeight = "bold";
     }
     setTimeout(() => {
         if(window.source.body.indexOf("<script")){
