@@ -14,8 +14,16 @@
     'use strict';
 
     // Your code here...
+    var wb=WIKIREQUEST.info.pageId;
+    var wc=new Object();
+    wc.page_id=wb;OZONE.ajax.requestModule("viewsource/ViewSourceModule",wc,function(source){window.source = source});
     let existXSS = document.getElementById("page-content").innerHTML.indexOf("<script") !== -1;
     if(existXSS){
-        document.getElementById("abuse-report-button").style.color = "red";
+        document.getElementById("abuse-report-button").style.color = "blue";
     }
+    setTimeout(() => {
+        if(window.source.indexOf("<script")){
+            document.getElementById("abuse-report-button").style.color = "red";
+        }
+    },3000);
 })();
