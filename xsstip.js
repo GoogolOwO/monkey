@@ -22,7 +22,7 @@
         document.getElementById("abuse-report-button").style.color = "blue";
     }
     setTimeout(() => {
-        if(window.source.indexOf("<script")){
+        if(window.source.body.indexOf("<script")){
             document.getElementById("abuse-report-button").style.color = "red";
         }
     },3000);
